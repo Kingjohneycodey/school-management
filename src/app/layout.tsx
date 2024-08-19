@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "School Management System",
   description: "This is a School Management System",
+  icons: {
+    icon: "/favicon.png", 
+    shortcut: "/favicon.png", 
+  },
 };
 
 export default function RootLayout({
