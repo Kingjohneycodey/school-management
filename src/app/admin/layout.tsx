@@ -119,7 +119,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
 
       {/* Main Content */}
       <main className="flex-1 ml-0 md:ml-64 p-6 bg-[var(--bg-secondary)]">
-        <header className="flex items-center justify-between w-[90%] md:w-[100%]">
+        <header className="flex items-center justify-between w-[80%] md:w-[100%] fixed left-[17%] md:left-[21%] inset-x-0 top-0 z-10 p-2">
           <Link href="/" className=" md:hidden">
             {" "}
             <img
@@ -131,20 +131,22 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
 
           <input type="text" className="hidden lg:block" />
 
-          <div className="flex items-center">
-            <span className=""> 
+          <div className="flex items-center gap-4">
+            <span className="bg-[var(--bg-gray)] p-2 rounded-full border-solid border border-gray-500 color-[#DDDDDD]"> 
             <FaBell />
             </span>
-            <span className="bg-[var(--bg-gray)] p-2 rounded-full border-solid border border-gray-500">
+            <span className="bg-[var(--bg-gray)] p-2 rounded-full border-solid border border-gray-500 color-[#DDDDDD] hidden md:block">
             <FaMessage />
             </span>
             
 
-            <div className="bg-[var(--bg-gray)] p-2 rounded-lg border-solid border border-gray-500">
-              <div>
-              <b>Ezekiel Nyeme</b>
+            <div className="bg-[var(--bg-gray)] px-2 py-1 rounded-lg border-solid border border-gray-500 flex items-center justify-between gap-4">
+            <img src="/images/person1.svg" alt="" />
+              <div className="hidden md:block">
+               
+              <small><b>Ezekiel Nyeme</b></small><br />
 
-              <span>Admin</span>
+              <small>Admin</small>
               </div>
 
               <BiCaretDown/>
