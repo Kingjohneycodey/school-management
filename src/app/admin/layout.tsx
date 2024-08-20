@@ -2,10 +2,10 @@
 import NavLink from "@/components/UI/NavLink";
 import Link from "next/link";
 import React, { ReactNode, useState } from "react";
-import { BiBookOpen, BiCalendar } from "react-icons/bi";
+import { BiBookOpen, BiCalendar, BiCaretDown } from "react-icons/bi";
 import { FaBell, FaCog, FaSignOutAlt, FaUser, FaUsers } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
-import { MdDashboard, MdRoom } from "react-icons/md";
+import { MdDashboard, } from "react-icons/md";
 import { PiStudent } from "react-icons/pi";
 
 interface AdminLayoutProps {
@@ -132,8 +132,23 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
           <input type="text" className="hidden lg:block" />
 
           <div className="flex items-center">
+            <span className=""> 
             <FaBell />
+            </span>
+            <span className="bg-[var(--bg-gray)] p-2 rounded-full border-solid border border-gray-500">
             <FaMessage />
+            </span>
+            
+
+            <div className="bg-[var(--bg-gray)] p-2 rounded-lg border-solid border border-gray-500">
+              <div>
+              <b>Ezekiel Nyeme</b>
+
+              <span>Admin</span>
+              </div>
+
+              <BiCaretDown/>
+            </div>
           </div>
         </header>
         <div className="min-h-[80vh] mt-20">{children}</div>
