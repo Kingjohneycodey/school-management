@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -68,7 +67,7 @@ export default function Home() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
-              href="/signup"
+              href="/login"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               <button className="rounded-2xl px-4 py-2 bg-[#B9FF66] text-black">
@@ -91,10 +90,21 @@ export default function Home() {
             School Management Dashboard
           </h1>
 
-          <p className="max-w-[70%] m-auto mt-4">
+          <p className="max-w-[70%] m-auto mt-8">
             A School Management SaaS product designed to manage student,
             Teacher, and Parent activities, enabling effective management of the
             school and learning resources.
+          </p>
+
+          <p className="mt-12">
+          <Link
+              href="/login"
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
+              <button className="rounded-2xl px-4 py-2 bg-[#B9FF66] text-black">
+                Get Started <span aria-hidden="true">&rarr;</span>
+              </button>
+            </Link>
           </p>
         </div>
 
