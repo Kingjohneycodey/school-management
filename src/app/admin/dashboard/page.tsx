@@ -4,7 +4,7 @@ const AdminDashboard: React.FC = () => {
   return (
     <div>
       <h1>Admin Dashboard</h1>
-      <p>Manage your Dashboard here.</p>
+      <p>Manage your Dashboard here.ewfewfwefwefwewewegegewgwgwgwgw</p>
     </div>
   );
 };

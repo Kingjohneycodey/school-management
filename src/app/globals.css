@@ -10,6 +10,8 @@
   --primary: #B9FF66;
   --secondary: #000000;
   --tertiary: #ffffff;
+  --bg-gray: #1E1E1E;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,7 +35,7 @@ body {
 
 @layer components {
   .custom-heading {
-    @apply text-4xl font-bold leading-tight; /* Example for h1 styling */
+    @apply text-4xl font-medium leading-tight; /* Example for h1 styling */
   }
   
   .custom-heading-2 {
