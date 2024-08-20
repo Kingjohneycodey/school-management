@@ -3,7 +3,8 @@ import NavLink from "@/components/UI/NavLink";
 import Link from "next/link";
 import React, { ReactNode, useState } from "react";
 import { BiBookOpen, BiCalendar } from "react-icons/bi";
-import { FaCog, FaSignOutAlt, FaUser, FaUsers } from "react-icons/fa";
+import { FaBell, FaCog, FaSignOutAlt, FaUser, FaUsers } from "react-icons/fa";
+import { FaMessage } from "react-icons/fa6";
 import { MdDashboard, MdRoom } from "react-icons/md";
 import { PiStudent } from "react-icons/pi";
 
@@ -37,11 +38,14 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
         } md:translate-x-0 transition-transform duration-300 ease-in-out`}
       >
         <div className="flex justify-between items-center md:hidden  mb-12">
-          <Link href="/"> <img
-            src="/images/logo.svg"
-            alt=""
-            className="max-w-[200px] md:max-w-[250px] w-[80%]"
-          /></Link>
+          <Link href="/">
+            {" "}
+            <img
+              src="/images/logo.svg"
+              alt=""
+              className="max-w-[200px] md:max-w-[250px] w-[80%]"
+            />
+          </Link>
           <button className="text-white focus:outline-none" onClick={toggleNav}>
             <svg
               className="w-6 h-6"
@@ -60,11 +64,14 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
           </button>
         </div>
 
-        <Link href="/"> <img
-          src="/images/logo.svg"
-          alt=""
-          className="max-w-[200px] md:max-w-[250px] w-[90%] m-auto hidden md:block mt-2 mb-12"
-        /></Link>
+        <Link href="/">
+          {" "}
+          <img
+            src="/images/logo.svg"
+            alt=""
+            className="max-w-[200px] md:max-w-[250px] w-[90%] m-auto hidden md:block mt-2 mb-12"
+          />
+        </Link>
 
         {navigation.map((item) => (
           <NavLink key={item.name} href={item.href}>
@@ -72,11 +79,12 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
           </NavLink>
         ))}
 
-<Link href="/"
-              className="block py-2.5 px-4 rounded transition duration-200 hover:bg-[var(--secondary)] flex items-center gap-2 fixed bottom-5"
-            >
-              <FaSignOutAlt /> Logout
-            </Link>
+        <Link
+          href="/"
+          className="block py-2.5 px-4 rounded transition duration-200 hover:bg-[var(--secondary)] flex items-center gap-2 fixed bottom-5"
+        >
+          <FaSignOutAlt /> Logout
+        </Link>
       </nav>
 
       {/* Hamburger Icon */}
@@ -111,9 +119,22 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
 
       {/* Main Content */}
       <main className="flex-1 ml-0 md:ml-64 p-6 bg-[var(--bg-secondary)]">
-        <header className="flex items-center">
+        <header className="flex items-center justify-between w-[90%] md:w-[100%]">
+          <Link href="/" className=" md:hidden">
+            {" "}
+            <img
+              src="/favicon.png"
+              alt=""
+              className="max-w-[200px] md:max-w-[250px] w-[80%]"
+            />
+          </Link>
 
           <input type="text" className="hidden lg:block" />
+
+          <div className="flex items-center">
+            <FaBell />
+            <FaMessage />
+          </div>
         </header>
         <div className="min-h-[80vh] mt-20">{children}</div>
 

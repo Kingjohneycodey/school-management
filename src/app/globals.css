@@ -27,11 +27,11 @@ body {
   color: var(--tertiary);
 }
 
-@layer utilities {
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
 
 @layer components {
   .custom-heading {
