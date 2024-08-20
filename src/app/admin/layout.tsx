@@ -2,8 +2,8 @@
 import NavLink from "@/components/UI/NavLink";
 import Link from "next/link";
 import React, { ReactNode, useState } from "react";
-import { BiCalendar } from "react-icons/bi";
-import { FaCog, FaUser } from "react-icons/fa";
+import { BiBookOpen, BiCalendar } from "react-icons/bi";
+import { FaCog, FaSignOutAlt, FaUser, FaUsers } from "react-icons/fa";
 import { MdDashboard, MdRoom } from "react-icons/md";
 import { PiStudent } from "react-icons/pi";
 
@@ -21,8 +21,8 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   const navigation = [
     { name: "Home", href: "/admin/dashboard", icon: <MdDashboard /> },
     { name: "Students", href: "/admin/profile", icon: <PiStudent /> },
-    { name: "Teachers", href: "/admin/profile", icon: <FaUser /> },
-    { name: "Classes", href: "/admin/profile", icon: <MdRoom /> },
+    { name: "Teachers", href: "/admin/profile", icon: <FaUsers /> },
+    { name: "Classes", href: "/admin/profile", icon: <BiBookOpen /> },
     { name: "Calendar", href: "/admin/profile", icon: <BiCalendar /> },
     { name: "Profile", href: "/admin/profile", icon: <FaUser /> },
     { name: "Settings", href: "/admin/settings", icon: <FaCog /> },
@@ -71,6 +71,12 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
             {item?.icon} {item.name}
           </NavLink>
         ))}
+
+<Link href="/"
+              className="block py-2.5 px-4 rounded transition duration-200 hover:bg-[var(--secondary)] flex items-center gap-2 fixed bottom-5"
+            >
+              <FaSignOutAlt /> Logout
+            </Link>
       </nav>
 
       {/* Hamburger Icon */}
@@ -105,7 +111,10 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
 
       {/* Main Content */}
       <main className="flex-1 ml-0 md:ml-64 p-6 bg-[var(--bg-secondary)]">
-        <header></header>
+        <header className="flex items-center">
+
+          <input type="text" className="hidden lg:block" />
+        </header>
         <div className="min-h-[80vh] mt-20">{children}</div>
 
         <footer>School dashboard @ 2024</footer>
