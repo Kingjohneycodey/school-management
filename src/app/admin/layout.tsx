@@ -119,7 +119,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
 
       {/* Main Content */}
       <main className="flex-1 ml-0 md:ml-64 p-6 bg-[var(--bg-secondary)]">
-        <header className="flex items-center justify-between w-[80%] md:w-[100%] fixed left-[17%] md:left-[21%] inset-x-0 top-0 z-10 p-2">
+        <header className="flex items-center justify-between w-[80%] md:w-[79%] lg:w-[79%] fixed left-[17%] md:left-[30%] lg:left-[21%] inset-x-0 top-0 z-10 p-2">
           <Link href="/" className=" md:hidden">
             {" "}
             <img
@@ -155,7 +155,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
         </header>
         <div className="min-h-[80vh] mt-20">{children}</div>
 
-        <footer>School dashboard @ 2024</footer>
+        <footer className="text-center">School dashboard @ 2024</footer>
       </main>
     </div>
   );
