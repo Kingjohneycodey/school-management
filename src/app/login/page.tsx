@@ -110,6 +110,7 @@ const Login = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            className="text-[var(--secondary)]"
             style={{
               width: "100%",
               padding: "8px",
@@ -138,6 +139,7 @@ const Login = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
+              className="text-[var(--secondary)]"
               style={{
                 width: "100%",
                 padding: "8px",
@@ -155,7 +157,7 @@ const Login = () => {
                 cursor: "pointer",
       
               }}
-              className="text-[var(--primary)]"
+              className="text-[var(--secondary)]"
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </span>
